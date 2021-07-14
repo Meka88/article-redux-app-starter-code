@@ -1,6 +1,8 @@
 // import neccessary libraries and apply middlewares
+import { reducer } from "./reducers";
+import { createStore } from 'redux';
 
-const store = null;
+const store = createStore(reducer);
 export default store;
 
 

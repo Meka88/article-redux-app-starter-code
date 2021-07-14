@@ -1,12 +1,17 @@
-// Show list of Articles that user added
+import { useSelector } from "react-redux";
 
 const ConnectedList = () => {
+  const articles = useSelector(state => state.articles);
+
+  console.log(articles, "hey")
   return (
     <ul className="list-group list-group-flush">
-      {/* map articles */}
+      { articles.map(article => (
         <li className="list-group-item">
-          {/* single article */}
+          {article}
         </li>
+      ))
+    }
     </ul>
   );
 };
